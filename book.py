@@ -53,12 +53,7 @@ class Book(Order):
         self.buy_orders = []
         self.sell_orders = []
         self.count =0
-        
-    '''def Book_display(self):
-        df_buy = pandas.DataFrame(self.buy_orders, columns=["BUY"])
-        df_sell = pandas.DataFrame(self.sell_orders, columns=["SELL"])
-        final_df = pandas.concat([df_buy, df_sell], axis = 1).fillna("           ")
-        return(final_df.to_markdown())'''
+    
         
     def insert_order(self, quantity, price, side):
         order1=Order(quantity, price, side)
