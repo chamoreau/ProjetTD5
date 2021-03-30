@@ -12,7 +12,7 @@ def main():
     book.insert_order(10, 10.0, 1)
     
     print(book.tabular_print())
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()
     
 
