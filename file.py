@@ -10,8 +10,9 @@ def main():
     book.insert_order(2, 11.0, 0)
     book.insert_order(1, 11.0, 1)
     book.insert_order(10, 10.0, 1)
-
-    if __name__ == "__main__":
-        main()
+    
+    print(book.tabular_print())
+if __name__ == "__main__":
+    main()
     
 
