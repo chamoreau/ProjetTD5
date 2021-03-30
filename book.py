@@ -1,6 +1,6 @@
 from functools import total_ordering
 from enum import Enum
-
+import pandas as pd
 
 
 
@@ -54,6 +54,11 @@ class Book(Order):
         self.sell_orders = []
         self.count =0
     
+    def tabular_print(self):
+        dataframe_buy=pd.Dataframe(self.buy_orders,columns=["BUY"])
+        dataframe_sell=pd.Dataframe(self.sell_orders,columns=["SELL"])
+        final_dataframe=pd.concat([dataframe_buy,dataframe_sell],axis=1).fillna("        ")
+        return(final_dataframe.to_markdown())
         
     def insert_order(self, quantity, price, side):
         order1=Order(quantity, price, side)
